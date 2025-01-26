@@ -10,7 +10,7 @@ import ShopProducts from "../../wrappers/product/ShopProducts";
 import ShopSidebar from "../../wrappers/product/ShopSidebar";
 import ShopTopbar from "../../wrappers/product/ShopTopbar";
 
-const Collection = () => {
+const Accessory = () => {
   const [layout, setLayout] = useState("grid three-column");
   const [filterSortValue, setFilterSortValue] = useState("");
   const [modelFilter, setModelFilter] = useState([]);
@@ -56,7 +56,7 @@ const Collection = () => {
     {
       fields: ["*"],
       filters: [
-        ["category", "=", "Vehicle"],
+        ["category", "=", "Accessory"],
         ...(search.length ? [search] : []),
         ...(modelFilter.length ? [modelFilter] : []),
         ...(brandFilter.length ? [brandFilter] : []),
@@ -85,7 +85,7 @@ const Collection = () => {
     {
       fields: ["name"],
       filters: [
-        ["category", "=", "Vehicle"],
+        ["category", "=", "Accessory"],
         ...(search.length ? [search] : []),
         ...(modelFilter.length ? [modelFilter] : []),
         ...(brandFilter.length ? [brandFilter] : []),
@@ -105,7 +105,7 @@ const Collection = () => {
     <Fragment>
       <SEO
         titleTemplate="Shop Page"
-        description="Shop page of flone react minimalist eCommerce template."
+        description="Shop page of ev hub minimalist eCommerce template."
       />
 
       <LayoutOne headerTop="visible">
@@ -113,7 +113,7 @@ const Collection = () => {
         <Breadcrumb
           pages={[
             { label: "Home", path: "/" },
-            { label: "Collection", path: pathname },
+            { label: "Accessory", path: pathname },
           ]}
         />
 
@@ -163,4 +163,4 @@ const Collection = () => {
   );
 };
 
-export default Collection;
+export default Accessory;

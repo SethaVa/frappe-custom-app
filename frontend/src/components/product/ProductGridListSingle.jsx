@@ -228,9 +228,13 @@ const ProductGridListSingle = ({
               ) : (
                 ""
               )}
-              {product.description ? (
+
+              {product.custom_short_description ? (
                 <p
-                  dangerouslySetInnerHTML={{ __html: product.description }}
+                  className="product-list-short-description"
+                  dangerouslySetInnerHTML={{
+                    __html: product.custom_short_description,
+                  }}
                 ></p>
               ) : (
                 ""
@@ -337,7 +341,7 @@ ProductGridListSingle.propTypes = {
     rating: PropTypes.number,
     selectedProductColor: PropTypes.string,
     selectedProductSize: PropTypes.string,
-    shortDescription: PropTypes.string,
+    custom_short_description: PropTypes.string,
     category: PropTypes.array,
     tag: PropTypes.array,
     description: PropTypes.string,

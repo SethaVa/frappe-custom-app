@@ -854,6 +854,89 @@
   }
 }
 
+.station-search {
+  flex: 1;
+  .search-content {
+    flex: 1;
+    position: relative;
+    form {
+      position: relative;
+      flex: 1;
+
+      width: 100%;
+      input {
+        width: 100%;
+        padding: 5px 72px 5px 15px;
+
+        transition: all 0.4s ease 0s;
+
+        color: #000;
+        border: 1px solid #d3d3d3;
+        outline: medium none;
+        background: transparent;
+      }
+    }
+
+    .dropdown-content {
+      position: absolute;
+      z-index: 99;
+      top: 120%;
+      right: 0;
+
+      visibility: hidden;
+
+      width: 100%;
+      padding: 15px;
+
+      transition: all 0.5s ease 0s;
+      transform: rotateX(90deg);
+      transform-origin: center top 0;
+
+      opacity: 0;
+      background: #ffffff none repeat scroll 0 0;
+      box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+      &.active {
+        visibility: visible;
+
+        transform: rotateX(0deg);
+
+        opacity: 1;
+      }
+      @media #{$md-layout} {
+        top: 154%;
+      }
+      @media #{$xs-layout} {
+        top: 154%;
+        right: -105px;
+
+        min-width: 260px;
+      }
+
+      ul {
+        li {
+          font-size: 13px;
+          line-height: 50px;
+
+          display: block;
+
+          padding: 0px 10px;
+
+          text-transform: capitalize;
+
+          color: #000;
+          border-bottom-color: #8f8f8f;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+
+          span {
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .station-wrap,
 .station-list-image-wrap {
   .station-map {

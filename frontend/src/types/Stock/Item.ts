@@ -1,11 +1,11 @@
-import { UOMConversionDetail } from './UOMConversionDetail'
 import { ItemBarcode } from './ItemBarcode'
-import { ItemReorder } from './ItemReorder'
-import { ItemVariantAttribute } from './ItemVariantAttribute'
-import { ItemDefault } from './ItemDefault'
-import { ItemSupplier } from './ItemSupplier'
 import { ItemCustomerDetail } from './ItemCustomerDetail'
+import { ItemDefault } from './ItemDefault'
+import { ItemReorder } from './ItemReorder'
+import { ItemSupplier } from './ItemSupplier'
 import { ItemTax } from './ItemTax'
+import { ItemVariantAttribute } from './ItemVariantAttribute'
+import { UOMConversionDetail } from './UOMConversionDetail'
 
 export interface Item{
 	name: string

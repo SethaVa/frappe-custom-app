@@ -57,8 +57,9 @@ const StationSidebar = ({ getFilterParams, sideSpaceClass }) => {
       <StationLocation
         selectedLocation={selectedLocation}
         locations={locationList || []}
-        getFilterParams={(params, value) => {
-          getFilterParams(params, value);
+        getFilterParams={(value) => {
+          console.log(value);
+          // getFilterParams(params, value);
         }}
       />
     </div>

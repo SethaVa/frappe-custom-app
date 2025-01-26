@@ -82,6 +82,11 @@
     }
     h3 {
       font-size: 24px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       margin: 0;
 
@@ -98,12 +103,12 @@
       }
     }
     .product-list-price {
-      margin: 13px 0 22px;
+      margin: 13px 0 13px;
       @media #{$xs-layout} {
         margin: 13px 0 13px;
       }
       @media #{$md-layout} {
-        margin: 13px 0 19px;
+        margin: 13px 0 13px;
       }
       span {
         font-size: 24px;
@@ -126,6 +131,25 @@
         }
       }
     }
+
+    .product-list-short-description {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0px;
+      margin: 0;
+
+      p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
     .rating-review {
       display: flex;
       align-items: center;
@@ -315,6 +339,12 @@
         h3 {
           font-size: 20px;
           line-height: 20px;
+
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         .product-list-price {
           margin: 13px 0 10px;
@@ -334,6 +364,11 @@
         h3 {
           font-size: 20px;
           line-height: 20px;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
         .product-list-price {
           margin: 13px 0 10px;

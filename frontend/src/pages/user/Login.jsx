@@ -16,8 +16,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
-  const { currentUser, isValidating, isLoading, login, logout, error } =
-    useFrappeAuth();
+  const { isLoading, login } = useFrappeAuth();
 
   const handleLogin = async (e) => {
     e.preventDefault();

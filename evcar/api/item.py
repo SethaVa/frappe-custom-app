@@ -1,7 +1,7 @@
 import frappe
 
 @frappe.whitelist(allow_guest=True)
-def get_latest_products(limit=12):
+def get_latest_products(category, limit=12):
     query = """
             SELECT
                 i.name,
@@ -13,18 +13,20 @@ def get_latest_products(limit=12):
             FROM
                 `tabItem` i
             LEFT JOIN
-                `tabBin` b ON b.item_code = i.name      
+                `tabBin` b ON b.item_code = i.name   
+            WHERE
+                i.category = %s
             GROUP BY
                 i.name, i.item_name  
             ORDER BY
                 name ASC
             LIMIT %s
         """
-    products = frappe.db.sql(query, (limit,), as_dict=True)
+    products = frappe.db.sql(query, (category, limit), as_dict=True)
     return products
 
 @frappe.whitelist(allow_guest=True)
-def get_best_sale_items(limit=12):
+def get_best_sale_items(category, limit=12):
     query = """
         SELECT
             sii.item_code AS name,
@@ -41,14 +43,14 @@ def get_best_sale_items(limit=12):
         LEFT JOIN
             `tabBin` b ON b.item_code = i.name      
         WHERE
-            sii.docstatus = 1
+            sii.docstatus = 1 and i.category = %s
         GROUP BY
             sii.item_code
         ORDER BY
             total_qty_sold DESC
         LIMIT %s
     """
-    best_selling_items = frappe.db.sql(query, (limit,), as_dict=True)
+    best_selling_items = frappe.db.sql(query, (category, limit), as_dict=True)
 
     if not best_selling_items:
         fallback_query = """
@@ -62,12 +64,14 @@ def get_best_sale_items(limit=12):
             FROM
                 `tabItem` i
             LEFT JOIN
-                `tabBin` b ON b.item_code = i.name      
+                `tabBin` b ON b.item_code = i.name  
+            WHERE
+                i.category = %s    
             ORDER BY
                 name ASC
             LIMIT %s
         """
-        best_selling_items = frappe.db.sql(fallback_query, (limit,), as_dict=True)
+        best_selling_items = frappe.db.sql(fallback_query, (category, limit), as_dict=True)
 
     return best_selling_items
 

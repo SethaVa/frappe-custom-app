@@ -1,63 +1,54 @@
-import axios from "axios";
+import { useFrappeGetCall } from "frappe-react-sdk";
 import { Fragment, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import SEO from "../../components/seo";
-import { getStationEndPoint } from "../../helpers/station";
+import StationTopAction from "../../components/station/StationTopAction";
+import mockLocation from "../../data/location.json";
 import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
 import StationCharger from "../../wrappers/station/StationCharger";
-import StationSidebar from "../../wrappers/station/StationSidebar";
 
 const Station = () => {
-  const [layout] = useState("grid two-column");
-  const [filterParams, setFilterParams] = useState();
-  const [filterValue, setFilterValue] = useState();
-  const [stations, setStation] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const formatedLocation = mockLocation.map((x) => ({
+    label: x.name,
+    value: x,
+  }));
+  const [zoom] = useState(12);
+  const [filterValue, setFilterValue] = useState({
+    lat: 11.5563738,
+    lng: 104.9282099,
+  });
+
+  const [locations] = useState(formatedLocation);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [stations, setStations] = useState([]);
 
   let { pathname } = useLocation();
 
-  const getFilterParams = (filterParams, filterValue) => {
-    setFilterParams(filterParams);
-    setFilterValue(filterValue);
+  const getFilterParams = (filterValue) => {
+    setFilterValue({
+      lat: filterValue.latitude,
+      lng: filterValue.longitude,
+    });
   };
+
+  const { data: stations, mutate } = useFrappeGetCall(
+    "evcar.api.station.get_charging_stations",
+    {
+      latitude: filterValue.lat,
+      longitude: filterValue.lng,
+    }
+  );
 
   useEffect(() => {
     const fetchData = async () => {
-      setIsLoading(true);
-      try {
-        const myHeaders = new Headers();
-        myHeaders.append("Accept", "application/json");
-        myHeaders.append("Content-Type", "application/json");
-
-        const raw = JSON.stringify({});
-
-        const requestOptions = {
-          method: "GET",
-          headers: myHeaders,
-          body: raw,
-          redirect: "follow",
-        };
-
-        const url = getStationEndPoint({
-          endpoint: "/api/stations",
-          location: filterParams === "location" ? filterValue.value : "",
-        });
-
-        const response = await axios.get(url, {
-          headers: requestOptions,
-        });
-
-        setStation(response.data.data);
-        setIsLoading(false);
-      } catch (err) {
-        console.log("Error fetching data", err);
-        setIsLoading(false);
-      }
+      mutate();
     };
 
     fetchData();
-  }, [filterParams, filterValue]);
+
+    console.log("filter", filterValue);
+  }, [filterValue]);
 
   return (
     <Fragment>
@@ -75,22 +66,21 @@ const Station = () => {
           ]}
         />
 
-        <div className="shop-area pt-95 pb-100">
+        <div className="shop-area pt-20 pb-100">
           <div className="container">
             <div className="row">
-              <div className="col-lg-3 order-2 order-lg-1">
-                {/* shop sidebar */}
-                <StationSidebar
+              <div className="col-lg-12 order-1 order-lg-2">
+                {/* shop topbar default */}
+                <StationTopAction
                   getFilterParams={getFilterParams}
-                  sideSpaceClass="mr-30"
+                  locations={locations}
                 />
-              </div>
-              <div className="col-lg-9 order-1 order-lg-2">
+
                 {/* shop page content default */}
                 <StationCharger
-                  layout={layout}
-                  stations={stations || []}
-                  isLoading={isLoading}
+                  center={filterValue}
+                  stations={stations?.message || []}
+                  zoom={zoom}
                 />
               </div>
             </div>

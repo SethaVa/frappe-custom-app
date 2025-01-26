@@ -243,3 +243,7 @@ app_license = "agpl-3.0"
 # }
 
 website_route_rules = [{'from_route': '/evcar/<path:app_path>', 'to_route': 'evcar'},]
+
+fixtures=[
+    "Custom Field"
+]

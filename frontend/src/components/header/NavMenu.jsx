@@ -23,6 +23,9 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
             <Link to={"/collection"}>{t("collection")}</Link>
           </li>
           <li>
+            <Link to={"/accessory"}>{t("accessory")}</Link>
+          </li>
+          <li>
             <Link to={"/station"}>{t("station")}</Link>
           </li>
           <li>

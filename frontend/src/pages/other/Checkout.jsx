@@ -27,6 +27,7 @@ const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
   const [clientSecret, setClientSecret] = useState("");
+  console.log();
 
   let cartTotalPrice = 0;
 
@@ -81,7 +82,7 @@ const CheckoutForm = () => {
       setClientSecret(result.message.payment_intent_client_secret);
 
       const { error, paymentIntent } = await stripe.confirmCardPayment(
-        result.message.payment_intent_client_secret,
+        clientSecret,
         {
           payment_method: {
             card: elements.getElement(CardElement),

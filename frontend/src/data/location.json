@@ -1,0 +1,582 @@
+[
+  {
+    "name": "Banteay Meanchey",
+    "latitude": 13.75319140,
+    "longitude": 102.98961500
+  },
+  {
+    "name": "Battambang",
+    "latitude": 13.02869710,
+    "longitude": 102.98961500
+  },
+  {
+    "name": "Kampong Cham",
+    "latitude": 12.09829180,
+    "longitude": 105.31311850
+  },
+  {
+    "name": "Kampong Chhnang",
+    "latitude": 12.13923520,
+    "longitude": 104.56552730
+  },
+  {
+    "name": "Kampong Speu",
+    "latitude": 11.61551090,
+    "longitude": 104.37919120
+  },
+  {
+    "name": "Kampong Thom",
+    "latitude": 12.81674850,
+    "longitude": 103.84131040
+  },
+  {
+    "name": "Kampot",
+    "latitude": 10.73253510,
+    "longitude": 104.37919120
+  },
+  {
+    "name": "Kandal",
+    "latitude": 11.22373830,
+    "longitude": 105.12589550
+  },
+  {
+    "name": "Kep",
+    "latitude": 10.53608900,
+    "longitude": 104.35591580
+  },
+  {
+    "name": "Koh Kong",
+    "latitude": 11.57628040,
+    "longitude": 103.35872880
+  },
+  {
+    "name": "Kratie",
+    "latitude": 12.50436080,
+    "longitude": 105.96998780
+  },
+  {
+    "name": "Mondulkiri",
+    "latitude": 12.78794270,
+    "longitude": 107.10119310
+  },
+  {
+    "name": "Oddar Meanchey",
+    "latitude": 14.16097380,
+    "longitude": 103.82162610
+  },
+  {
+    "name": "Pailin",
+    "latitude": 12.90929620,
+    "longitude": 102.66755750
+  },
+  {
+    "name": "Phnom Penh",
+    "latitude": 11.55637380,
+    "longitude": 104.92820990
+  },
+  {
+    "name": "Preah Vihear",
+    "latitude": 14.00857970,
+    "longitude": 104.84546190
+  },
+  {
+    "name": "Prey Veng",
+    "latitude": 11.38024420,
+    "longitude": 105.50054830
+  },
+  {
+    "name": "Pursat",
+    "latitude": 12.27209560,
+    "longitude": 103.72891670
+  },
+  {
+    "name": "Ratanakiri",
+    "latitude": 13.85766070,
+    "longitude": 107.10119310
+  },
+  {
+    "name": "Siem Reap",
+    "latitude": 13.33026600,
+    "longitude": 104.10013260
+  },
+  {
+    "name": "Sihanoukville",
+    "latitude": 10.75818990,
+    "longitude": 103.82162610
+  },
+  {
+    "name": "Stung Treng",
+    "latitude": 13.57647300,
+    "longitude": 105.96998780
+  },
+  {
+    "name": "Svay Rieng",
+    "latitude": 11.14272200,
+    "longitude": 105.82902980
+  },
+  {
+    "name": "Takeo",
+    "latitude": 10.93215190,
+    "longitude": 104.79877100
+  },
+  {
+    "name": "Mongkol Borei, Banteay Meanchey",
+    "latitude": 13.45531000,
+    "longitude": 102.99186000
+  },
+  {
+    "name": "Paoy Paet, Banteay Meanchey",
+    "latitude": 13.65805000,
+    "longitude": 102.56365000
+  },
+  {
+    "name": "Sisophon, Banteay Meanchey",
+    "latitude": 13.58588000,
+    "longitude": 102.97369000
+  },
+  {
+    "name": "Srok Malai, Banteay Meanchey",
+    "latitude": 13.49902000,
+    "longitude": 102.60164000
+  },
+  {
+    "name": "Srok Svay Chek, Banteay Meanchey",
+    "latitude": 13.81305000,
+    "longitude": 102.95269000
+  },
+  {
+    "name": "Srok Ak Phnum, Battambang",
+    "latitude": 13.23621000,
+    "longitude": 103.45894000
+  },
+  {
+    "name": "Srok Banan, Battambang",
+    "latitude": 12.97067000,
+    "longitude": 103.04742000
+  },
+  {
+    "name": "Srok Bavil, Battambang",
+    "latitude": 13.23601000,
+    "longitude": 102.82910000
+  },
+  {
+    "name": "Srok Rotanak Mondol, Battambang",
+    "latitude": 12.84048000,
+    "longitude": 102.88700000
+  },
+  {
+    "name": "Cheung Prey, Kampong Cham",
+    "latitude": 12.10000000,
+    "longitude": 105.07000000
+  },
+  {
+    "name": "Srok Batheay, Kampong Cham",
+    "latitude": 12.02986000,
+    "longitude": 104.93171000
+  },
+  {
+    "name": "Srok Batheay, Kampong Cham",
+    "latitude": 12.02986000,
+    "longitude": 104.93171000
+  },
+  {
+    "name": "Baribour, Kampong Chhnang",
+    "latitude": 12.43000000,
+    "longitude": 104.47000000
+  },
+  {
+    "name": "Rolea B'ier, Kampong Chhnang",
+    "latitude": 12.21000000,
+    "longitude": 104.61000000
+  },
+  {
+    "name": "Srok Chol Kiri, Kampong Chhnang",
+    "latitude": 12.15861000,
+    "longitude": 104.82287000
+  },
+  {
+    "name": "Srok Sameakki Mean Chey, Kampong Chhnang",
+    "latitude": 11.86788000,
+    "longitude": 104.55549000
+  },
+  {
+    "name": "Krong Chbar Mon, Kampong Speu",
+    "latitude": 11.47091000,
+    "longitude": 104.50655000
+  },
+  {
+    "name": "Srok Basedth, Kampong Speu",
+    "latitude": 11.18432000,
+    "longitude": 104.53584000
+  },
+  {
+    "name": "Srok Kong Pisei, Kampong Speu",
+    "latitude": 11.31648000,
+    "longitude": 104.65992000
+  },
+  {
+    "name": "Srok Odong, Kampong Speu",
+    "latitude": 11.66845000,
+    "longitude": 104.61224000
+  },
+  {
+    "name": "Angkor Chey, Kampot",
+    "latitude": 10.76667000,
+    "longitude": 104.65000000
+  },
+  {
+    "name": "Banteay Meas, Kampot",
+    "latitude": 10.61667000,
+    "longitude": 104.53333000
+  },
+  {
+    "name": "Chhouk, Kampot",
+    "latitude": 10.81667000,
+    "longitude": 104.45000000
+  },
+  {
+    "name": "Kampong Bay, Kampot",
+    "latitude": 10.59554000,
+    "longitude": 104.17136000
+  },
+  {
+    "name": "Kampong Tranch, Kampot",
+    "latitude": 10.55000000,
+    "longitude": 104.46667000
+  },
+  {
+    "name": "Srok Chum Kiri, Kampot",
+    "latitude": 11.00540000,
+    "longitude": 104.44207000
+  },
+  {
+    "name": "Srok Chum Kiri, Kampot",
+    "latitude": 11.00540000,
+    "longitude": 104.44207000
+  },
+  {
+    "name": "Srok Dangtong, Kampot",
+    "latitude": 10.70733000,
+    "longitude": 104.42229000
+  },
+  {
+    "name": "Srok Tuek Chhou, Kampot",
+    "latitude": 10.74557000,
+    "longitude": 104.11013000
+  },
+  {
+    "name": "Krong Ta Khmau, Kandal",
+    "latitude": 11.45474000,
+    "longitude": 104.94350000
+  },
+  {
+    "name": "Srok Khsach Kandal, Kandal",
+    "latitude": 11.69224000,
+    "longitude": 105.03732000
+  },
+  {
+    "name": "Ta Khmau, Kandal",
+    "latitude": 11.48333000,
+    "longitude": 104.95000000
+  },
+  {
+    "name": "Ta Khmau, Kandal",
+    "latitude": 11.48333000,
+    "longitude": 104.95000000
+  },
+  {
+    "name": "Krong Kep, Kep",
+    "latitude": 10.48291000,
+    "longitude": 104.31672000
+  },
+  {
+    "name": "Srok Damnak Chang'aeur, Kep",
+    "latitude": 10.53394000,
+    "longitude": 104.34855000
+  },
+  {
+    "name": "Smach Mean Chey, Koh Kong",
+    "latitude": 11.54665000,
+    "longitude": 103.03569000
+  },
+  {
+    "name": "Srae Ambel, Koh Kong",
+    "latitude": 11.10968000,
+    "longitude": 103.76226000
+  },
+  {
+    "name": "Srok Batum Sakor, Koh Kong",
+    "latitude": 11.11465000,
+    "longitude": 103.38993000
+  },
+  {
+    "name": "Srok Mondol Seima, Koh Kong",
+    "latitude": 11.81292000,
+    "longitude": 103.01159000
+  },
+  {
+    "name": "Kracheh, Kratie",
+    "latitude": 12.57000000,
+    "longitude": 106.20000000
+  },
+  {
+    "name": "Snuol, Kratie",
+    "latitude": 12.19373000,
+    "longitude": 106.47361000
+  },
+  {
+    "name": "Krong Senmonourom, Mondulkiri",
+    "latitude": 12.50480000,
+    "longitude": 107.15525000
+  },
+  {
+    "name": "Sen Monorom, Mondulkiri",
+    "latitude": 12.45583000,
+    "longitude": 107.18811000
+  },
+  {
+    "name": "Srok Kaev Seima, Mondulkiri",
+    "latitude": 12.41722000,
+    "longitude": 106.77025000
+  },
+  {
+    "name": "Srok Pech Chreada, Mondulkiri",
+    "latitude": 12.72780000,
+    "longitude": 107.09480000
+  },
+  {
+    "name": "Samraong, Oddar Meanchey",
+    "latitude": 14.18175000,
+    "longitude": 103.51761000
+  },
+  {
+    "name": "Srok Banteay Ampil, Oddar Meanchey",
+    "latitude": 14.18590000,
+    "longitude": 103.25925000
+  },
+  {
+    "name": "Srok Samraong, Oddar Meanchey",
+    "latitude": 14.25039000,
+    "longitude": 103.62739000
+  },
+  {
+    "name": "Srok Trapeang Prasat, Oddar Meanchey",
+    "latitude": 14.25809000,
+    "longitude": 104.30835000
+  },
+  {
+    "name": "Khan Sala Krau, Pailin",
+    "latitude": 12.97984000,
+    "longitude": 102.63957000
+  },
+  {
+    "name": "Khan 7 Makara, Phnom Penh",
+    "latitude": 11.56254000,
+    "longitude": 104.91405000
+  },
+  {
+    "name": "Khan Chamkar Mon, Phnom Penh",
+    "latitude": 11.54390000,
+    "longitude": 104.92175000
+  },
+  {
+    "name": "Khan Dangkao, Phnom Penh",
+    "latitude": 11.52457000,
+    "longitude": 104.83944000
+  },
+  {
+    "name": "Khan Duon Penh, Phnom Penh",
+    "latitude": 11.57561000,
+    "longitude": 104.92025000
+  },
+  {
+    "name": "Khan Mean Chey, Phnom Penh",
+    "latitude": 11.51976000,
+    "longitude": 104.95467000
+  },
+  {
+    "name": "Khan Russey Keo, Phnom Penh",
+    "latitude": 11.61946000,
+    "longitude": 104.90990000
+  },
+  {
+    "name": "Khan Saen Sokh, Phnom Penh",
+    "latitude": 11.61289000,
+    "longitude": 104.86078000
+  },
+  {
+    "name": "Sangkom Thmei, Preah Vihear",
+    "latitude": 13.47395000,
+    "longitude": 104.77051000
+  },
+  {
+    "name": "Srok Ch'eh Sen, Preah Vihear",
+    "latitude": 13.58215000,
+    "longitude": 105.34533000
+  },
+  {
+    "name": "Srok Chheb, Preah Vihear",
+    "latitude": 13.91077000,
+    "longitude": 105.46180000
+  },
+  {
+    "name": "Srok Kulen, Preah Vihear",
+    "latitude": 13.78597000,
+    "longitude": 104.61052000
+  },
+  {
+    "name": "Srok Rovieng, Preah Vihear",
+    "latitude": 13.35105000,
+    "longitude": 105.09956000
+  },
+  {
+    "name": "Srok Tbeng Meanchey, Preah Vihear",
+    "latitude": 13.78622000,
+    "longitude": 105.01586000
+  },
+  {
+    "name": "Tbeng Meanchey, Preah Vihear",
+    "latitude": 13.80731000,
+    "longitude": 104.98046000
+  },
+  {
+    "name": "Srok Kampong Leav, Prey Veng",
+    "latitude": 11.50970000,
+    "longitude": 105.30110000
+  },
+  {
+    "name": "Srok Mesang, Prey Veng",
+    "latitude": 11.35528000,
+    "longitude": 105.57235000
+  },
+  {
+    "name": "Srok Preah Sdech, Prey Veng",
+    "latitude": 11.08690000,
+    "longitude": 105.37497000
+  },
+  {
+    "name": "Bakan, Pursat",
+    "latitude":12.78000000,
+    "longitude": 103.79000000
+  },
+  {
+    "name": "Krakor, Pursat",
+    "latitude": 12.48000000,
+    "longitude": 104.19000000
+  },
+  {
+    "name": "Sampov Meas, Pursat",
+    "latitude": 12.47055000	,
+    "longitude": 103.91817000
+  },
+  {
+    "name": "Srok Kandieng, Pursat",
+    "latitude": 12.71245000,
+    "longitude": 104.02592000
+  },
+  {
+    "name": "Srok Veal Vêng, Pursat",
+    "latitude": 12.24230000,
+    "longitude": 103.13444000
+  },
+  {
+    "name": "Banlung, Ratanakiri",
+    "latitude": 13.73939000,
+    "longitude": 106.98727000
+  },
+  {
+    "name": "Lumphat, Ratanakiri",
+    "latitude": 13.49146000,
+    "longitude": 106.98022000
+  },
+  {
+    "name": "Srok Andong Meas, Ratanakiri",
+    "latitude": 13.49146000,
+    "longitude": 106.98022000
+  },
+  {
+    "name": "Srok Ba Kev, Ratanakiri",
+    "latitude": 13.70749000,
+    "longitude": 107.19442000
+  },
+  {
+    "name": "Srok Ban Lung, Ratanakiri",
+    "latitude": 13.68200000,
+    "longitude": 107.03025000
+  },
+  {
+    "name": "Srok Koun Mom, Ratanakiri",
+    "latitude": 13.51772000,
+    "longitude": 106.75142000
+  },
+  {
+    "name": "Srok Ou Ya Dav, Ratanakiri",
+    "latitude": 13.54328000,
+    "longitude": 107.44636000
+  },
+  {
+    "name": "Srok Ta Veng, Ratanakiri",
+    "latitude": 14.29192000,
+    "longitude": 107.24031000
+  },
+  {
+    "name": "Srok Angkor Thum, Siem Reap",
+    "latitude": 13.57881000,
+    "longitude": 103.85645000
+  },
+  {
+    "name": "Srok Prasat Bakong, Siem Reap",
+    "latitude": 13.21031000,
+    "longitude": 103.97689000
+  },
+  {
+    "name": "Svay Leu, Siem Reap",
+    "latitude": 13.69168000,
+    "longitude": 104.27446000
+  },
+  {
+    "name": "Varin, Siem Reap",
+    "latitude": 13.83574000,
+    "longitude": 103.89968000
+  },
+  {
+    "name": "Srok Stueng Hav, Sihanoukville",
+    "latitude": 10.85249000,
+    "longitude": 103.74016000
+  },
+  {
+    "name": "Srok Sresen, Stung Treng",
+    "latitude": 13.60530000,
+    "longitude": 106.35819000
+  },
+  {
+    "name": "Stueng Traeng, Stung Treng",
+    "latitude": 13.65000000,
+    "longitude": 106.07000000
+  },
+  {
+    "name": "Srok Svay Chrum, Svay Rieng",
+    "latitude": 11.11160000,
+    "longitude": 105.69814000
+  },
+  {
+    "name": "Krong Doun Kaev, Takeo",
+    "latitude": 10.99459000,
+    "longitude": 104.79550000
+  },
+  {
+    "name": "Phumi Veal Sre, Takeo",
+    "latitude": 10.98081000,
+    "longitude": 104.77828000
+  },
+  {
+    "name": "Srok Angkor Borei, Takeo",
+    "latitude": 10.99291000,
+    "longitude": 104.95177000
+  },
+  {
+    "name": "Srok Borei Cholsar, Takeo",
+    "latitude": 10.81414000,
+    "longitude": 104.98994000
+  }
+]

@@ -3,10 +3,8 @@ import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
-import products from "./data/products.json";
 import Home from "./pages/home/home.jsx";
 import PersistProvider from "./store/providers/persist-provider";
-import { setProducts } from "./store/slices/product-slice.js";
 import { store } from "./store/store";
 
 // import "animate.css";
@@ -34,7 +32,8 @@ const Checkout = lazy(() => import("./pages/other/Checkout.jsx"));
 const Cart = lazy(() => import("./pages/other/Cart.jsx"));
 const Login = lazy(() => import("./pages/user/Login.jsx"));
 const MyAccount = lazy(() => import("./pages/user/Account.jsx"));
-const Register = lazy(() => import("./pages/user/Login.jsx"));
+const Register = lazy(() => import("./pages/user/Register.jsx"));
+const Accessory = lazy(() => import("./pages/accessory/Accessory.jsx"));
 
 const router = createBrowserRouter([
   {
@@ -97,11 +96,13 @@ const router = createBrowserRouter([
         path: "register",
         element: <Register />,
       },
+      {
+        path: "accessory",
+        element: <Accessory />,
+      },
     ],
   },
 ]);
-
-store.dispatch(setProducts(products));
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
