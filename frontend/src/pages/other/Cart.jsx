@@ -12,6 +12,8 @@ import {
 } from "../../store/slices/cart-slice";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
 
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
+
 const Cart = () => {
   let cartTotalPrice = 0;
 
@@ -77,7 +79,7 @@ const Cart = () => {
                             return (
                               <tr key={key}>
                                 <td className="product-thumbnail">
-                                  <Link to={"/product/" + cartItem.name}>
+                                  <Link to={BASENAME + "/product/" + cartItem.name}>
                                     <img
                                       className="img-fluid"
                                       src={cartItem.image}
@@ -87,7 +89,7 @@ const Cart = () => {
                                 </td>
 
                                 <td className="product-name">
-                                  <Link to={"/product/" + cartItem.name}>
+                                  <Link to={BASENAME + "/product/" + cartItem.name}>
                                     {cartItem.item_name}
                                   </Link>
                                   {cartItem?.selectedProductColor &&
@@ -202,7 +204,7 @@ const Cart = () => {
                   <div className="col-lg-12">
                     <div className="cart-shiping-update-wrapper">
                       <div className="cart-shiping-update">
-                        <Link to={"/checkout"}>Continue Shopping</Link>
+                        <Link to={BASENAME + "/checkout"}>Continue Shopping</Link>
                       </div>
                       <div className="cart-clear">
                         <button onClick={() => dispatch(deleteAllFromCart())}>
@@ -234,7 +236,7 @@ const Cart = () => {
                           {currency.currencySymbol + cartTotalPrice.toFixed(2)}
                         </span>
                       </h4>
-                      <Link to={"/checkout"}>Proceed to Checkout</Link>
+                      <Link to={BASENAME + "/checkout"}>Proceed to Checkout</Link>
                     </div>
                   </div>
                 </div>
@@ -248,7 +250,7 @@ const Cart = () => {
                     </div>
                     <div className="item-empty-area__text">
                       No items found in cart <br />{" "}
-                      <Link to={"/collection"}>Shop Now</Link>
+                      <Link to={BASENAME + "/collection"}>Shop Now</Link>
                     </div>
                   </div>
                 </div>

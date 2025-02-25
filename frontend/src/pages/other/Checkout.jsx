@@ -14,6 +14,7 @@ import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISH_KEY);
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
 
 const Checkout = () => {
   return (
@@ -317,7 +318,7 @@ const CheckoutForm = () => {
                     </div>
                     <div className="item-empty-area__text">
                       No items found in cart to checkout <br />{" "}
-                      <Link to={"/collection"}>Shop Now</Link>
+                      <Link to={BASENAME + "/collection"}>Shop Now</Link>
                     </div>
                   </div>
                 </div>

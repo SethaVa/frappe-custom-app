@@ -7,6 +7,7 @@ import { getProductCartQuantity } from "../../helpers/product";
 import { addToCart } from "../../store/slices/cart-slice";
 import { addToWishlist } from "../../store/slices/wishlist-slice";
 import Rating from "./sub-components/ProductRating";
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
 
 const ProductDescriptionInfo = ({
   product,
@@ -268,7 +269,7 @@ const ProductDescriptionInfo = ({
             {product.category.map((single, key) => {
               return (
                 <li key={key}>
-                  <Link to={"/shop-grid-standard"}>{single}</Link>
+                  <Link to={BASENAME + "/shop-grid-standard"}>{single}</Link>
                 </li>
               );
             })}
@@ -284,7 +285,7 @@ const ProductDescriptionInfo = ({
             {product.tag.map((single, key) => {
               return (
                 <li key={key}>
-                  <Link to={"/shop-grid-standard"}>{single}</Link>
+                  <Link to={BASENAME + "/shop-grid-standard"}>{single}</Link>
                 </li>
               );
             })}

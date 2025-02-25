@@ -10,6 +10,8 @@ import { addToCompare } from "../../store/slices/compare-slice";
 import { addToWishlist } from "../../store/slices/wishlist-slice";
 import Rating from "./sub-components/ProductRating";
 
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
+
 const ProductGridListSingle = ({
   product,
   currency,
@@ -34,7 +36,7 @@ const ProductGridListSingle = ({
     <Fragment>
       <div className={clsx("product-wrap", spaceBottomClass)}>
         <div className="product-img">
-          <Link to={"/product/" + product.name}>
+          <Link to={BASENAME + "/product/" + product.name}>
             <img className="default-img" src={product?.image} alt="" />
           </Link>
           {product.discount || product.new ? (
@@ -76,7 +78,7 @@ const ProductGridListSingle = ({
                   Buy now{" "}
                 </a>
               ) : product.variation && product.variation.length >= 1 ? (
-                <Link to={`/product/${product.name}`}>Select Option</Link>
+                <Link to={BASENAME + `/product/${product.name}`}>Select Option</Link>
               ) : !(product.stock_quantity && product.stock_quantity > 0) ? (
                 <button
                   onClick={() => dispatch(addToCart(product))}
@@ -106,7 +108,7 @@ const ProductGridListSingle = ({
         </div>
         <div className="product-content text-center">
           <h3>
-            <Link to={"/product/" + product.name}>{product.item_name}</Link>
+            <Link to={BASENAME + "/product/" + product.name}>{product.item_name}</Link>
           </h3>
           {product.rating && product.rating > 0 ? (
             <div className="product-rating">
@@ -157,7 +159,7 @@ const ProductGridListSingle = ({
           <div className="col-xl-4 col-md-5 col-sm-6">
             <div className="product-list-image-wrap">
               <div className="product-img">
-                <Link to={"/product/" + product.name}>
+                <Link to={BASENAME + "/product/" + product.name}>
                   <img
                     className="default-img img-fluid"
                     src={product.image}
@@ -182,7 +184,7 @@ const ProductGridListSingle = ({
           <div className="col-xl-8 col-md-7 col-sm-6">
             <div className="shop-list-content">
               <h3>
-                <Link to={"/product/" + product.name}>{product.item_name}</Link>
+                <Link to={BASENAME + "/product/" + product.name}>{product.item_name}</Link>
               </h3>
               <div className="product-list-price">
                 {discountedPrice !== null ? (
@@ -252,7 +254,7 @@ const ProductGridListSingle = ({
                       Buy now{" "}
                     </a>
                   ) : product.variation && product.variation.length >= 1 ? (
-                    <Link to={`/product/${product.name}`}>Select Option</Link>
+                    <Link to={BASENAME + `/product/${product.name}`}>Select Option</Link>
                   ) : !(
                       product.stock_quantity && product.stock_quantity > 0
                     ) ? (

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getDiscountPrice } from "../../../helpers/product";
 import { deleteFromCart } from "../../../store/slices/cart-slice";
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
 
 const MenuCart = () => {
   const dispatch = useDispatch();
@@ -34,13 +35,13 @@ const MenuCart = () => {
               return (
                 <li className="single-shopping-cart" key={item.cartItemId}>
                   <div className="shopping-cart-img">
-                    <Link to={"/product/" + item.name}>
+                    <Link to={BASENAME + "/product/" + item.name}>
                       <img alt="" src={item.image} className="img-fluid" />
                     </Link>
                   </div>
                   <div className="shopping-cart-title">
                     <h4>
-                      <Link to={"/product/" + item.name}>
+                      <Link to={BASENAME + "/product/" + item.name}>
                         {" "}
                         {item.item_name}{" "}
                       </Link>

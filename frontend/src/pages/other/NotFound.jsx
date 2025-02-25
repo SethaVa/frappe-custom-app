@@ -4,6 +4,8 @@ import SEO from "../../components/seo";
 import LayoutOne from "../../layouts/LayoutOne";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
 
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
+
 const NotFound = () => {
   let { pathname } = useLocation();
 
@@ -44,7 +46,7 @@ const NotFound = () => {
                       <i className="fa fa-search" />
                     </button>
                   </form>
-                  <Link to={"/"} className="error-btn">
+                  <Link to={BASENAME} className="error-btn">
                     Back to home page
                   </Link>
                 </div>

@@ -11,6 +11,8 @@ import {
 } from "../../store/slices/wishlist-slice";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
 
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
+
 const Wishlist = () => {
   const dispatch = useDispatch();
   let { pathname } = useLocation();
@@ -72,7 +74,7 @@ const Wishlist = () => {
                             return (
                               <tr key={key}>
                                 <td className="product-thumbnail">
-                                  <Link to={"/product/" + wishlistItem.name}>
+                                  <Link to={BASENAME + "/product/" + wishlistItem.name}>
                                     <img
                                       className="img-fluid"
                                       src={wishlistItem.image}
@@ -82,7 +84,7 @@ const Wishlist = () => {
                                 </td>
 
                                 <td className="product-name text-center">
-                                  <Link to={"/product/" + wishlistItem.name}>
+                                  <Link to={BASENAME + "/product/" + wishlistItem.name}>
                                     {wishlistItem.item_name}
                                   </Link>
                                 </td>
@@ -119,7 +121,7 @@ const Wishlist = () => {
                                     </a>
                                   ) : wishlistItem.variation &&
                                     wishlistItem.variation.length >= 1 ? (
-                                    <Link to={`/product/${wishlistItem.name}`}>
+                                    <Link to={BASENAME + `/product/${wishlistItem.name}`}>
                                       Select option
                                     </Link>
                                   ) : !(
@@ -182,7 +184,7 @@ const Wishlist = () => {
                   <div className="col-lg-12">
                     <div className="cart-shiping-update-wrapper">
                       <div className="cart-shiping-update">
-                        <Link to={"/collection"}>Continue Shopping</Link>
+                        <Link to={BASENAME + "/collection"}>Continue Shopping</Link>
                       </div>
                       <div className="cart-clear">
                         <button
@@ -204,7 +206,7 @@ const Wishlist = () => {
                     </div>
                     <div className="item-empty-area__text">
                       No items found in wishlist <br />{" "}
-                      <Link to={"/collection"}>Add Items</Link>
+                      <Link to={BASENAME + "/collection"}>Add Items</Link>
                     </div>
                   </div>
                 </div>

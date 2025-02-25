@@ -2,11 +2,13 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
+
 const FooterCopyright = ({ footerLogo, spaceBottomClass, colorClass }) => {
   return (
     <div className={clsx("copyright", spaceBottomClass, colorClass)}>
       <div className="footer-logo">
-        <Link to="/">
+        <Link to={BASENAME}>
           <img alt="" src={footerLogo} />
         </Link>
       </div>

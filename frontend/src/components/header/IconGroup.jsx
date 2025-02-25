@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import MenuCart from "./sub-components/MenuCart";
 
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
+
 const IconGroup = ({ iconWhiteClass }) => {
   const handleClick = (e) => {
     e.currentTarget.nextSibling.classList.toggle("active");
@@ -44,27 +46,19 @@ const IconGroup = ({ iconWhiteClass }) => {
         <div className="account-dropdown">
           <ul>
             <li>
-              <Link to="/login-register">Login</Link>
+              <Link to={BASENAME + "/login-register"}>Login</Link>
             </li>
             <li>
-              <Link to="/login-register">Register</Link>
+              <Link to={BASENAME + "/login-register"}>Register</Link>
             </li>
             <li>
-              <Link to="/my-account">my account</Link>
+              <Link to={BASENAME + "/my-account"}>my account</Link>
             </li>
           </ul>
         </div>
       </div>
-      {/* <div className="same-style header-compare">
-        <Link to="/compare">
-          <i className="pe-7s-shuffle" />
-          <span className="count-style">
-            {compareItems && compareItems.length ? compareItems.length : 0}
-          </span>
-        </Link>
-      </div> */}
       <div className="same-style header-wishlist">
-        <Link to="/wishlist">
+        <Link to={BASENAME + "/wishlist"}>
           <i className="pe-7s-like" />
           <span className="count-style">
             {wishlistItems && wishlistItems.length ? wishlistItems.length : 0}

@@ -9,6 +9,8 @@ import { addToCart } from "../../store/slices/cart-slice";
 import { deleteFromCompare } from "../../store/slices/compare-slice";
 import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
 
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
+
 const Compare = () => {
   const dispatch = useDispatch();
   let { pathname } = useLocation();
@@ -70,7 +72,7 @@ const Compare = () => {
                                     />
                                   </Link>
                                   <div className="product-title">
-                                    <Link to={"/product/" + compareItem.name}>
+                                    <Link to={BASENAME + "/product/" + compareItem.name}>
                                       {compareItem.name}
                                     </Link>
                                   </div>
@@ -86,7 +88,7 @@ const Compare = () => {
                                       </a>
                                     ) : compareItem.variation &&
                                       compareItem.variation.length >= 1 ? (
-                                      <Link to={`/product/${compareItem.name}`}>
+                                      <Link to={BASENAME + `/product/${compareItem.name}`}>
                                         Select Option
                                       </Link>
                                     ) : compareItem.stock_quantity &&
@@ -203,7 +205,7 @@ const Compare = () => {
                     </div>
                     <div className="item-empty-area__text">
                       No items found in compare <br />{" "}
-                      <Link to={"/collection"}>Add Items</Link>
+                      <Link to={BASENAME + "/collection"}>Add Items</Link>
                     </div>
                   </div>
                 </div>

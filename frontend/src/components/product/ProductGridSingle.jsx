@@ -9,6 +9,8 @@ import { addToCart } from "../../store/slices/cart-slice";
 import { addToWishlist } from "../../store/slices/wishlist-slice";
 import Rating from "./sub-components/ProductRating";
 
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
+
 const ProductGridSingle = ({
   product,
   currency,
@@ -32,7 +34,7 @@ const ProductGridSingle = ({
     <Fragment>
       <div className={clsx("product-wrap", spaceBottomClass)}>
         <div className="product-img">
-          <Link to={"/product/" + product?.name}>
+          <Link to={BASENAME + "/product/" + product?.name}>
             <img className="default-img" src={product?.image} alt="" />
           </Link>
           {product?.discount || product?.new ? (
@@ -74,7 +76,7 @@ const ProductGridSingle = ({
                   Buy now{" "}
                 </a>
               ) : product.variation && product.variation.length >= 1 ? (
-                <Link to={`/product/${product.id}`}>Select Option</Link>
+                <Link to={BASENAME + `/product/${product.id}`}>Select Option</Link>
               ) : product.stock_quantity && product.stock_quantity > 0 ? (
                 <button
                   onClick={() => dispatch(addToCart(product))}
@@ -104,7 +106,7 @@ const ProductGridSingle = ({
         </div>
         <div className="product-content text-center">
           <h3>
-            <Link to={"/product/" + product?.name}>{product?.item_name}</Link>
+            <Link to={BASENAME + "/product/" + product?.name}>{product?.item_name}</Link>
           </h3>
           {product?.rating && product?.rating > 0 ? (
             <div className="product-rating">

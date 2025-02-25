@@ -20,6 +20,8 @@ import "./i18n.js";
 
 import "react-loading-skeleton/dist/skeleton.css";
 
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
+
 const Collection = lazy(() => import("./pages/collection/Collection.jsx"));
 const Compare = lazy(() => import("./pages/other/Compare.jsx"));
 const Contact = lazy(() => import("./pages/other/Contact.jsx"));
@@ -37,67 +39,67 @@ const Accessory = lazy(() => import("./pages/accessory/Accessory.jsx"));
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: `${BASENAME}`,
     element: <App />,
     children: [
       {
-        path: "/",
+        path: `${BASENAME}`,
         element: <Home />,
       },
       {
-        path: "product/:id",
+        path: `${BASENAME}product/:id`,
         element: <Product />,
       },
       {
-        path: "collection",
+        path: `${BASENAME}collection`,
         element: <Collection />,
       },
       {
-        path: "wishlist",
+        path: `${BASENAME}wishlist`,
         element: <Wishlist />,
       },
       {
-        path: "contact",
+        path: `${BASENAME}contact`,
         element: <Contact />,
       },
       {
-        path: "compare",
+        path: `${BASENAME}compare`,
         element: <Compare />,
       },
       {
-        path: "about",
+        path: `${BASENAME}about`,
         element: <About />,
       },
       {
-        path: "not-found",
+        path: `${BASENAME}not-found`,
         element: <NotFound />,
       },
       {
-        path: "station",
+        path: `${BASENAME}station`,
         element: <Station />,
       },
       {
-        path: "checkout",
+        path: `${BASENAME}checkout`,
         element: <Checkout />,
       },
       {
-        path: "cart",
+        path: `${BASENAME}cart`,
         element: <Cart />,
       },
       {
-        path: "login",
+        path: `${BASENAME}login`,
         element: <Login />,
       },
       {
-        path: "my-account",
+        path: `${BASENAME}my-account`,
         element: <MyAccount />,
       },
       {
-        path: "register",
+        path: `${BASENAME}register`,
         element: <Register />,
       },
       {
-        path: "accessory",
+        path: `${BASENAME}accessory`,
         element: <Accessory />,
       },
     ],

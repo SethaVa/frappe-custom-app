@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import NavMenu from "./NavMenu";
 import HeaderSocial from "./sub-components/HeaderSocial";
 
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
+
 const OffcanvasMenu = ({ activeState, getActiveState }) => {
   return (
     <div className={clsx("clickable-mainmenu", activeState ? "inside" : "")}>
@@ -16,7 +18,7 @@ const OffcanvasMenu = ({ activeState, getActiveState }) => {
         </button>
       </div>
       <div className="side-logo">
-        <Link to={"/"}>
+        <Link to={BASENAME}>
           <img alt="" src={"../../../public/assets/img/logo/logo.png"} />
         </Link>
       </div>

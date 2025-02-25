@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import FooterCopyright from "../../components/footer/FooterCopyright";
 import FooterNewsletter from "../../components/footer/FooterNewsletter";
 
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
+
 const FooterOne = ({
   backgroundColorClass,
   spaceTopClass,
@@ -51,13 +53,13 @@ const FooterOne = ({
               <div className="footer-list">
                 <ul>
                   <li>
-                    <Link to="/about">About us</Link>
+                    <Link to={BASENAME + "/about"}>About us</Link>
                   </li>
                   <li>
                     <Link to="#/">Store location</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to={BASENAME + "/contact"}>Contact</Link>
                   </li>
                   <li>
                     <Link to="#/">Orders tracking</Link>

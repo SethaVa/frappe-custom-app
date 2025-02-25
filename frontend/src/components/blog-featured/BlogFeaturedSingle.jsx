@@ -1,11 +1,13 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
+const BASENAME = import.meta.env.MODE === "production" ? "/evcar" : "/";
+
 const BlogFeaturedSingle = ({ singlePost }) => {
   return (
     <div className="blog-wrap mb-30 scroll-zoom">
       <div className="blog-img">
-        <Link to={singlePost.url}>
+        <Link to={BASENAME + singlePost.url}>
           <img src="../../../public/assets/img/blog/blog-2.jpg" alt="" />
         </Link>
         <div className="blog-category-names">
@@ -21,10 +23,10 @@ const BlogFeaturedSingle = ({ singlePost }) => {
       <div className="blog-content-wrap">
         <div className="blog-content text-center">
           <h3>
-            <Link to={singlePost.url}>{singlePost.title}</Link>
+            <Link to={BASENAME + singlePost.url}>{singlePost.title}</Link>
           </h3>
           <span>
-            By <Link to={singlePost.authorUrl}>{singlePost.author}</Link>
+            By <Link to={BASENAME + singlePost.authorUrl}>{singlePost.author}</Link>
           </span>
         </div>
       </div>
