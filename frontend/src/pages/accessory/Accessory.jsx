@@ -56,7 +56,7 @@ const Accessory = () => {
     {
       fields: ["*"],
       filters: [
-        ["category", "=", "Accessory"],
+        ["custom_category", "=", "Accessory"],
         ...(search.length ? [search] : []),
         ...(modelFilter.length ? [modelFilter] : []),
         ...(brandFilter.length ? [brandFilter] : []),
@@ -85,7 +85,7 @@ const Accessory = () => {
     {
       fields: ["name"],
       filters: [
-        ["category", "=", "Accessory"],
+        ["custom_category", "=", "Accessory"],
         ...(search.length ? [search] : []),
         ...(modelFilter.length ? [modelFilter] : []),
         ...(brandFilter.length ? [brandFilter] : []),

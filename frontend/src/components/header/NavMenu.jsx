@@ -19,22 +19,22 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
       <nav>
         <ul>
           <li>
-            <Link to={BASENAME}>{t("home")}</Link>
+            <Link to={BASENAME}>Home</Link>
           </li>
           <li>
-            <Link to={BASENAME + "/collection"}>{t("collection")}</Link>
+            <Link to={BASENAME + "/collection"}>Collection</Link>
           </li>
           <li>
-            <Link to={BASENAME + "/accessory"}>{t("accessory")}</Link>
+            <Link to={BASENAME + "/accessory"}>Collection</Link>
           </li>
           <li>
-            <Link to={BASENAME + "/station"}>{t("station")}</Link>
+            <Link to={BASENAME + "/station"}>Station</Link>
           </li>
           <li>
-            <Link to={BASENAME + "/contact"}>{t("contact_us")}</Link>
+            <Link to={BASENAME + "/contact"}>Contact</Link>
           </li>
           <li>
-            <Link to={BASENAME + "/about"}>{t("about_us")}</Link>
+            <Link to={BASENAME + "/about"}>About Us</Link>
           </li>
         </ul>
       </nav>

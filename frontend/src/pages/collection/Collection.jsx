@@ -56,7 +56,7 @@ const Collection = () => {
     {
       fields: ["*"],
       filters: [
-        ["category", "=", "Vehicle"],
+        ["custom_category", "=", "Vehicle"],
         ...(search.length ? [search] : []),
         ...(modelFilter.length ? [modelFilter] : []),
         ...(brandFilter.length ? [brandFilter] : []),
@@ -85,7 +85,7 @@ const Collection = () => {
     {
       fields: ["name"],
       filters: [
-        ["category", "=", "Vehicle"],
+        ["custom_category", "=", "Vehicle"],
         ...(search.length ? [search] : []),
         ...(modelFilter.length ? [modelFilter] : []),
         ...(brandFilter.length ? [brandFilter] : []),

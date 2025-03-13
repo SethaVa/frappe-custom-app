@@ -28,10 +28,7 @@ const HeroSliderOneSingle = ({ data }) => {
             <div className="slider-single-img slider-animated-1">
               <img
                 className="animated img-fluid"
-                src={
-                  import.meta.env.VITE_SITE_NAME +
-                  "../../../public/assets/img/slider/New Project.png"
-                }
+                src="http://188.166.247.153:8080/private/files/New%20Project%20(1).png"
                 alt=""
               />
             </div>
