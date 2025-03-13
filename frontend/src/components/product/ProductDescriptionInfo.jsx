@@ -87,6 +87,9 @@ const ProductDescriptionInfo = ({
         ""
       )}
       <div className="pro-details-list">
+        <p dangerouslySetInnerHTML={{ __html: product?.short_description }}></p>
+      </div>
+      <div className="pro-details-list">
         <p dangerouslySetInnerHTML={{ __html: product?.description }}></p>
       </div>
 
@@ -356,6 +359,7 @@ ProductDescriptionInfo.propTypes = {
     shortDescription: PropTypes.string,
     category: PropTypes.array,
     tag: PropTypes.array,
+    short_description: PropTypes.string
   }),
   wishlistItem: PropTypes.shape({}),
 };

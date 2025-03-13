@@ -82,6 +82,7 @@ def get_items_detail_by_name(id):
             i.name,
             i.item_name AS item_name,
             i.description,
+            i.custom_short_description AS short_description,
             i.valuation_rate as price,
             i.image,
             GROUP_CONCAT(f.file_url) AS file_urls,

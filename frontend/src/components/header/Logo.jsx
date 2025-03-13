@@ -8,7 +8,7 @@ const Logo = ({ imageUrl, logoClass }) => {
   return (
     <div className={clsx(logoClass)}>
       <Link to={BASENAME}>
-        <img alt="" src={imageUrl} />
+        <img alt="" src="http://188.166.247.153:8080/private/files/logo.png" />
       </Link>
     </div>
   );
