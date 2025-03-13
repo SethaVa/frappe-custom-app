@@ -15,7 +15,7 @@ def get_latest_products(category, limit=12):
             LEFT JOIN
                 `tabBin` b ON b.item_code = i.name   
             WHERE
-                i.category = %s
+                i.custom_category = %s
             GROUP BY
                 i.name, i.item_name  
             ORDER BY
@@ -43,7 +43,7 @@ def get_best_sale_items(category, limit=12):
         LEFT JOIN
             `tabBin` b ON b.item_code = i.name      
         WHERE
-            sii.docstatus = 1 and i.category = %s
+            sii.docstatus = 1 and i.custom_category = %s
         GROUP BY
             sii.item_code
         ORDER BY
@@ -66,7 +66,7 @@ def get_best_sale_items(category, limit=12):
             LEFT JOIN
                 `tabBin` b ON b.item_code = i.name  
             WHERE
-                i.category = %s    
+                i.custom_category = %s    
             ORDER BY
                 name ASC
             LIMIT %s
