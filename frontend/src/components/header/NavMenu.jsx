@@ -25,7 +25,7 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
             <Link to={BASENAME + "/collection"}>Collection</Link>
           </li>
           <li>
-            <Link to={BASENAME + "/accessory"}>Collection</Link>
+            <Link to={BASENAME + "/accessory"}>Accessory</Link>
           </li>
           <li>
             <Link to={BASENAME + "/station"}>Station</Link>
